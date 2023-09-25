@@ -36,7 +36,7 @@ const instance = basicLightbox.create(`
    <div class="modal">
       <img
         class="gallery__image"
-         src="${img.oreview}"
+         src="${img.preview}"
          data-source="${img.original}"
          alt="${img.description}"
          />
