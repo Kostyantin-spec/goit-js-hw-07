@@ -15,7 +15,7 @@ function galleryImg(arr) {
          <img
            class="gallery__image"
            src="${preview}"
-           data-source="${original}"
+           data-source="${preview}"
            alt="${description}"
          />
         </a>
@@ -33,12 +33,12 @@ function handleClick(event) {
 const img = event.target.closest(".gallery__image");
 console.log(img);
 img.setAttribute("src", img.dataset.source);
-const imgItem = galleryItems.filter(i => i.original === img.dataset.source)[0];
+const imgItem = galleryItems.filter(i => i.preview === img.dataset.source)[0];
 const instance = basicLightbox.create(`
    <div class="modal">
       <img
         class="gallery__image"
-         src="${imgItem.preview}"
+         src="${imgItem.original}"
          data-source="${imgItem.original}"
          alt="${imgItem.description}"
          />
