@@ -1,5 +1,7 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
+// Change code below this lin
+
+//console.log(galleryItems);
 
 const ulEl = document.querySelector('.gallery');
 ulEl.addEventListener('click', handleClick);
