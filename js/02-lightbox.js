@@ -24,7 +24,7 @@ function galleryImg(arr) {
     .join("");
 }
 
-
+ulEl.insertAdjacentHTML("beforeend", galleryImg(galleryItems));
 // Автономный плагин
 // При использовании автономного варианта (`simple-lightbox(.min).js`)
 
