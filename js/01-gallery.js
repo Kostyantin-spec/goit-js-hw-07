@@ -1,7 +1,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this lin
 
-//console.log(galleryItems);
+console.log(galleryItems);
 
 const ulEl = document.querySelector('.gallery');
 ulEl.addEventListener('click', handleClick);
@@ -33,7 +33,7 @@ function handleClick(event) {
 const img = event.target.closest(".gallery__image");
 console.log(img);
 img.setAttribute("src", img.dataset.source);
-const imgItem = galleryItems.filter(i => i.preview === img.dataset.source)[0];
+const imgItem = galleryItems.filter(i => i.original === img.dataset.source)[0];
 const instance = basicLightbox.create(`
    <div class="modal">
       <img
@@ -48,3 +48,5 @@ instance.show();
 }
 
 ulEl.insertAdjacentHTML("beforeend", galleryImg(galleryItems));
+
+
