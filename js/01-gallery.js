@@ -33,14 +33,14 @@ function handleClick(event) {
 const img = event.target.closest(".gallery__image");
 console.log(img);
 img.setAttribute("src", img.dataset.source);
-
+const imgItem = galleryItems.filter(i => i.preview === img.dataset.source)[0];
 const instance = basicLightbox.create(`
    <div class="modal">
       <img
         class="gallery__image"
-         src="${img.preview}"
-         data-source="${img.original}"
-         alt="${img.description}"
+         src="${imgItem.preview}"
+         data-source="${imgItem.original}"
+         alt="${imgItem.description}"
          />
    </div>
 `);
