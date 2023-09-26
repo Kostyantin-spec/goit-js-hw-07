@@ -23,7 +23,14 @@ function galleryImg(arr) {
     )
     .join("");
 }
+// function handleClick(event) {
+//     event.preventDefault();
+//     if(event.target === event.currentTarget){ 
+//     return;
+// }
 
+//const img = event.target.closest(".gallery__image");
+//console.log(img);
 
 
 
