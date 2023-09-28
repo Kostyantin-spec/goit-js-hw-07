@@ -33,25 +33,25 @@ function handleClick(event) {
 
 const img = event.target.closest(".gallery__image");
 console.log(img);
-img.setAttribute("src", img.dataset.source);
-const imgItem = galleryItems.filter(i => i.preview === img.dataset.source)[0];
-const instance = basicLightbox.create(`
-  <div class="modal">
-     <img
-       class="gallery__image"
-        src="${imgItem.original}"
+//img.setAttribute("src", img.dataset.source);
+//const imgItem = galleryItems.filter(i => i.preview === img.dataset.source)[0];
+// const instance = basicLightbox.create(`
+//   <div class="modal">
+//      <img
+//        class="gallery__image"
+//         src="${imgItem.original}"
         
-        alt="${imgItem.description}"
-        />
-  </div>
-`);
-instance.show();
+//         alt="${imgItem.description}"
+//         />
+//   </div>
+// `);
+//instance.show();
 }
 ulEl.insertAdjacentHTML("beforeend", galleryImg(galleryItems));
 
-var lightbox = new SimpleLightbox('.gallery a', {/* options */});
-// gallery.on('show.simplelightbox', function () {
-//    	// do something…
+var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+//  gallery.on('show.simplelightbox', function () {
+//    addEventListener('lightbox', 250)
 //    });
 //var lightbox = $('.gallery a').simpleLightbox({ /* options */ });
 
