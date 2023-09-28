@@ -49,12 +49,3 @@ instance.show();
 
 ulEl.insertAdjacentHTML("beforeend", galleryImg(galleryItems));
 
-instance.onShow( () => {   
-  document.addEventListener("keydown", handleEscapeKey);
-
-});
-function handleEscapeKey(e) {
-  if (e.key === "Escape") {
-    instance.close();
-  }
-}
